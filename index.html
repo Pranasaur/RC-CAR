@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Control</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+
+<body style="background-color:beige">
+
+
+
+    <center>
+  <u style="color:darkblue"><h1 style="color:darkblue; font-family:Verdana, Geneva, Tahoma, sans-serif">Car Control</h1></u>
+
+
+  <button style="background-color: blue; color:azure; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; height: 100px; width: 300px; font-size: 25.501px" >MECHANICAL PRODIGIES</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+  <div>
+
+   
+
+    
+
+    <button class="btn-btn-default" id="forward"  style="height: 100px; width: 100px; font-size:30px; background-color: aqua;" onmousedown="sendCommand('rightForward')" onmousedown="sendCommand('leftForward')" onmouseclick="sendCommand('stop')">
+      
+       <span class="glyphicon glyphicon-arrow-up"></span>
+      
+    </button>
+
+  
+
+    
+
+  </div>
+
+  <button id="left" class="btn-btn-default" style="height: 100px; width: 100px; font-size:30px; background-color: aqua; margin-right: 5px;" onmousedown="sendCommand('leftForward')" onmouseclick="sendCommand('stop')">
+    <span class="glyphicon glyphicon-arrow-left"></span>
+  </button>
+
+  <button id="Info" class="btn btn-default" style="height: 100px; width: 100px; font-size: 30px; background-color: blue; color: azure; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; border-radius: 100%;" onclick="info()">
+    Info
+  </button>
+
+<script>
+
+function info() {
+
+window.location.href = "info.html"
+
+}
+
+</script>
+
+
+
+  <button id="right" class="btn-btn-default" style="height: 100px; width: 100px; font-size:30px; background-color: aqua; margin-left: 5px" onmousedown="sendCommand('rightForward')" onmouseup="sendCommand('stop')">
+
+    <script>
+
+
+    </script>
+
+  
+  
+  <span class="glyphicon glyphicon-arrow-right"></span>
+  
+  </button>
+
+  
+
+  <div>
+
+ <button id="Backward" class="btn-btn-default" style="height: 100px; width: 100px; font-size:30px; background-color: aqua; margin-top: 1%;" onmousedown="sendCommand('leftBackward')" onmousedown="sendCommand('rightBackward')" onmouseup="sendCommand('stop')">
+  <span class="glyphicon glyphicon-arrow-down"></span>
+  </button>
+
+
+
+  </div>
+
+  </center>
+
+  <span>
+  
+  
+
+  
+ 
+  <center>
+
+  
+  
+  
+
+  <script>
+    function sendCommand(command) {
+      fetch("/" + command);
+    }
+  </script>
+
+</center>
+</body>
+</html>
